@@ -24,6 +24,7 @@ class EmployeeFactory extends Factory
     {
         // $gender = $this->faker->randomElement(['male', 'female']);
         // $city   = $this->faker->randomElement(['Ahmedabad', 'Mehsana', 'Surat', 'Rajkot', 'Patan', 'Surendranagar']);
+        // $hobbies = implode(",", $this->faker->randomElements(['Playing', 'Reading', 'Travelling', 'Photography', 'Dancing'], 2));  // If want to save as string
 
         return [
             'first_name' => $this->faker->firstName,
@@ -33,8 +34,8 @@ class EmployeeFactory extends Factory
             'phone'      => $this->faker->numerify('##########'),
             'gender'     => $this->faker->randomElement(['male', 'female']),
             'city'       => $this->faker->randomElement(['Ahmedabad', 'Mehsana', 'Surat', 'Rajkot', 'Patan', 'Surendranagar']),
-            'skills'     => implode(",", $this->faker->randomElements(['Laravel', 'JQuery', 'Bootstrap', 'Codeigniter', 'JQuery UI'], 2)),
-            'hobbies'    => implode(",", $this->faker->randomElements(['Playing', 'Reading', 'Travelling', 'Photography', 'Dancing'], 2)),
+            'skills'     => $this->faker->randomElements(['Laravel', 'JQuery', 'Bootstrap', 'Codeigniter', 'JQuery UI'], 2),
+            'hobbies'    => $this->faker->randomElements(['Playing', 'Reading', 'Travelling', 'Photography', 'Dancing'], 2),
             'about_us'   => $this->faker->sentence(20),
             'image'      => 'default.jpg',
             'is_active'  => 1,
