@@ -27,7 +27,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($employee as $key => $employee)
+        @foreach($employees as $key => $employee)
         <tr>
             <td>{{ ++$key}}</td>
             <td><img src="{{ asset('images/'.$employee->image)}}" alt="Image" width="50" height="50" /></td>
@@ -48,6 +48,9 @@
         @endforeach
     </tbody>
   </table>
+  <div class="d-flex justify-content-center">
+    {!! $employees->links() !!}
+  </div>
 <div>
 @endsection
 <script type="text/javascript">
