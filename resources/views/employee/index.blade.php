@@ -5,6 +5,7 @@
 <div class="mt-5">
   <div class="text-center">
       <h2>Laravel 8 Crud With Employee Information</h2>
+      <a class="btn btn-success" href="{{ url('students') }}">Click to Yajara Datatable</a>
   </div>
   @if ($message = Session::get('success'))
   <div class="alert alert-success alert-dismissible fade show" role="alert">

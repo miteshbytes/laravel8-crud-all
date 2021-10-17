@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\YajraDatatableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::resource('employees', EmployeeController::class);
+Route::get('students', [YajraDatatableController::class, 'index']);
+Route::get('students/list', [YajraDatatableController::class, 'getStudents'])->name('students.list');
